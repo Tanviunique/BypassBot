@@ -48,12 +48,12 @@ async def start_msg(client, message):
 
 @Bypass.on_message(command('about'))
 async def start_msg(client, message):
-    await message.reply(f'''<b>🤖 Mʏ Nᴀᴍᴇ: {}
+    await message.reply(f'''<b>🤖 My Name: Link Bypass Bot | LiveTeleBots
 🧑 Developer: <a href='https://t.me/bhaiyajihubbot'>Bhaiyaji</a>
-📚 Lɪʙʀᴀʀʏ: <a href='https://docs.pyrogram.org/'>Pʏʀᴏɢʀᴀᴍ</a>
-🗣 Lᴀɴɢᴜᴀɢᴇ: <a href='https://www.python.org/download/releases/3.0/'>Pʏᴛʜᴏɴ 3</a>
-🌐 DᴀᴛᴀBᴀsᴇ: <a href='https://www.mongodb.com/'>MᴏɴɢᴏDB</a>
-📊 Bᴜɪʟᴅ Sᴛᴀᴛᴜs: v1.0.0 [ Sᴛᴀʙʟᴇ ]</b>''',
+📚 Library: <a href='https://docs.pyrogram.org/'>Pyrogram</a>
+🗣 Language: <a href='https://www.python.org/download/releases/3.0/'>Pythgon 3</a>
+🌐 Database: <a href='https://www.mongodb.com/'>MongoDB</a>
+📊 Build Status: v1.0.0 [ Sᴛᴀʙʟᴇ ]</b>''',
         quote=True,
         reply_markup=InlineKeyboardMarkup([
             [InlineKeyboardButton('♻️ Support Channel ♻️', url='https://t.me/livetelebots'),]
