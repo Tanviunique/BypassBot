@@ -228,6 +228,3 @@ async def sharer_scraper(url):
         return drive_link[0]
     else:
         raise DDLException('Drive Link not found, Try in your browser')
-
-
-

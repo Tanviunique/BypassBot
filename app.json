@@ -1,0 +1,40 @@
+{
+  "name": "prolink",
+  "description": "Your app description",
+  "repository": "https://github.com/priyakapp/Link Bypass",
+  "keywords": ["python", "heroku"],
+  "env": {
+    "API_ID": {
+      "description": "Your API ID",
+      "value": "2066976",
+      "required": true
+    },
+    "API_HASH": {
+      "description": "Your API hash",
+      "value": "6668d5406ac9675f9de3e8fd1ccc357d",
+      "required": true
+    },
+    "BOT_TOKEN": {
+      "description": "Your bot token",
+      "value": "",
+      "required": true
+    },
+    "OWNER_ID": {
+      "description": "Admin user IDs (space-separated)",
+      "value": "1251111009",
+      "required": true
+    },
+    "AUTH_CHATS": {
+      "description": "Channel IDs (space-separated)",
+      "value": "",
+      "required": false
+
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ],
+  "stack": "heroku-22"
+}

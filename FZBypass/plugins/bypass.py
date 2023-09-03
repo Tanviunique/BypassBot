@@ -16,21 +16,122 @@ from FZBypass.core.exceptions import DDLException
 
 @Bypass.on_message(command('start'))
 async def start_msg(client, message):
-    await message.reply(f'''<b><i>FZ Bypass Bot!</i></b>
+    await message.reply(f'''<b>Link Bypass Bot | LiveTeleBots</b>
     
-    <i>A Powerful Elegant Multi Threaded Bot written in Python... which can Bypass Various Shortener Links, Scrape links, and More ... </i>
-    
-    <i><b>Bot Started {convert_time(time() - BOT_START)} ago...</b></i>
-
-🛃 <b>Use Me Here :</b> @CyberPunkGrp <i>(Bypass Topic)</i>''',
+<i>I can Bypass Various Shortener Links, Scrape links, and More ... </i>
+🛃 | <b>Click on below button to use me</b>''',
         quote=True,
         reply_markup=InlineKeyboardMarkup([
-            [InlineKeyboardButton('🎓 Dev', url='https://t.me/SilentDemonSD'), InlineKeyboardButton('🔍 Deploy Own', url="https://github.com/SilentDemonSD/FZBypassBot")]
+            [InlineKeyboardButton('♻️ Click Here ♻️', url='https://t.me/+-QfSjbyIV945MjNl'),]
             ])
     )
 
+@Bypass.on_message(command('help'))
+async def start_msg(client, message):
+    await message.reply(f'''<b>Shortener Supported Sites</b>
+adrinolinks.com	❌️
+anlinks.in	✅️
+bindaaslinks.com	✅️
+bit.ly + tinyurl.com + aylm.short.gy	✅️
+bringlifes.com	✅️
+dalink.in	✅️
+disk.yandex.ru + yandex.com	✅️
+download.mdiskshortner.link	✅️
+dropbox.in	✅️
+droplink.co	✅️
+dtglinks.in	✅️
+du-link.in + dulink.in	✅️
+earn.moneykamalo.com	✅️
+earn2me.com	✅️
+earn4link.in	✅️
+ez4short.com	✅️
+go.earnl.xyz	⚠️
+go.flashlink.in	⚠️
+go.indiurl.in.net	⚠️
+go.lolshort.tech	✅️
+gtlinks.me + gyanilinks.com	✅️
+hotfile.io + bayfiles.com + megaupload.nz + letsupload.cc + filechan.org + myfile.is + vshare.is + rapidshare.nu + lolabits.se + openload.cc + share-online.is + upvid.cc️	⚠️
+indianshortner.in	✅️
+indyshare.net	✅️
+kpslink.in	✅️
+krownlinks.me	✅️
+link.tnlink.in	️✅️
+link.tnshort.net	✅️
+link.vipurl.in + vipurl.in + count.vipurl.in	✅️
+link1s.com	✅️
+link4earn.com + link4earn.in	✅️
+linkbnao.com	✅️
+linkfly.me	✅️
+linkpays.in	✅️
+linksly.co	✅️
+linkvertise.com	✅️
+linkyearn.com	✅️
+m.easysky.in	❌️
+mdisk.pro	✅️
+mediafire.com	✅️
+moneycase.link	✅️
+mplaylink.com	✅️
+omnifly.in.net	✅️
+onepagelink.in	✅️
+ouo.io + ouo.press	✅️
+pandaznetwork.com	✅️
+pkin.me + go.paisakamalo.in	✅️
+powerlinks.site	✅️
+rocklinks.net	✅️
+rslinks.net	❌️
+shareus.in + shareus.io + shrs.link	️❌️
+sheralinks.com	✅️
+short.tnvalue.in	✅️
+short2url.in	✅️
+short2url.in	✅️
+shortingly.com	️✅️
+shrdsk.me	✅️
+shrdsk.me	️❌️
+shrinke.me	✅️
+shrinkforearn.xyz	✅️
+shrtco.de + 9qr.de + shiny.link	✅️
+sklinks.in + sklinks.tech	✅️
+sxslink.com	✅️
+tamizhmasters.com	✅️
+terabox. + terabox. + nephobox. + 4funbox. + mirrobox. + momerybox. + teraboxapp.	✅️
+tglink.in	✅️
+tinyfy.in	✅️
+try2link.com	✅️
+tulinks.one + go.tulinks.online + tulinks.online	✅️
+url4earn.in	✅️
+urllinkshort.in	✅️
+urlsopen.com	✅️
+urlspay.in	✅️
+v2.kpslink.in	✅️
+v2links.com	✅️
+viplinks.io	✅️
+vplinks.in	✅️
+xpshort.com + push.bdnewsx.com + techymozo.com	✅️
+ziplinker.net	✅️
+More Supported Sites...Updating	️♻️
 
-@Bypass.on_message(command(['bypass', 'bp']) & (user(Config.OWNER_ID) | chat_and_topics))
+<b>Scrape Supported Sites</b>
+cinevood.* (Page)	✅️
+kayoanime.com (Page)	✅️
+skymovieshd.*	✅️
+toonworld4all.* (Page + Episode)	✅️
+ww1.sharespark.cfd	✅️
+
+<b>GDrive Supported Sites</b>
+appdrive.club (File + Pack)	✅️
+drivefire.co	✅️
+filepress.space + filebee.*	✅️
+gdflix.cc(File + Pack)	❌️
+hubdrive.co (Instant Link)	✅️
+katdrive.org (Direct Download)	✅️
+new9.gdtot.cfd	✅️''',
+        quote=True,
+        reply_markup=InlineKeyboardMarkup([
+            [InlineKeyboardButton('📞 Contact Us! 📞', url='https://t.me/bhaiyajihubbot'),]
+            ])
+    )
+
+@Bypass.on_message(command(['bypass', 'bp', 'b']) & (user(Config.OWNER_ID) | chat_and_topics))
 async def bypass_check(client, message):
     uid = message.from_user.id
     if (reply_to := message.reply_to_message) and (reply_to.text is not None or reply_to.caption is not None):
@@ -122,7 +223,7 @@ async def inline_query(client, query):
             answers.append(InlineQueryResultArticle(
                 title="✅️ Bypass Link Success !",
                 input_message_content=InputTextMessageContent(
-                    f'{bp_link}\n\n✎﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏\n\n🧭 <b>Took Only <code>{convert_time(end - start)}</code></b>',
+                    f'{bp_link}\n\n_________________________\n\n🧭 <b>Took Only <code>{convert_time(end - start)}</code></b>',
                     disable_web_page_preview=True,
                 ),
                 description=f"Bypass via !bp {link}",
@@ -137,7 +238,7 @@ async def inline_query(client, query):
             answers.append(InlineQueryResultArticle(
                 title="❌️ Bypass Link Error !",
                 input_message_content=InputTextMessageContent(
-                    f'┎ <b>Source Link:</b> {link}\n┃\n┖ {bp_link}\n\n✎﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏\n\n🧭 <b>Took Only <code>{convert_time(end - start)}</code></b>',
+                    f'┎ <b>Source Link:</b> {link}\n┃\n┖ {bp_link}\n\n_________________________\n\n🧭 <b>Took Only <code>{convert_time(end - start)}</code></b>',
                     disable_web_page_preview=True,
                 ),
                 description=f"Bypass via !bp {link}",
@@ -150,7 +251,7 @@ async def inline_query(client, query):
         answers.append(InlineQueryResultArticle(
                 title="♻️ Bypass Usage: In Line",
                 input_message_content=InputTextMessageContent(
-                    '''<b><i>FZ Bypass Bot!</i></b>
+                    '''<b><i>Link Bypass Bot | LiveTeleBots</i></b>
     
     <i>A Powerful Elegant Multi Threaded Bot written in Python... which can Bypass Various Shortener Links, Scrape links, and More ... </i>
     
@@ -158,7 +259,7 @@ async def inline_query(client, query):
                 ),
                 description="Bypass via !bp [link]",
                 reply_markup=InlineKeyboardMarkup([
-                        [InlineKeyboardButton("FZ Channel", url="https://t.me/FXTorrentz"),
+                        [InlineKeyboardButton("🔅 Our Channel", url="https://t.me/livetelebots"),
                         InlineKeyboardButton('Try Bypass', switch_inline_query_current_chat="!bp ")]
                 ])
             ))
