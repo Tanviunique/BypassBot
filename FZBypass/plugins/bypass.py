@@ -18,7 +18,8 @@ from FZBypass.core.exceptions import DDLException
 async def start_msg(client, message):
     await message.reply(f'''<b>Link Bypass Bot | LiveTeleBots</b>
     
-<i>I can Bypass Various Shortener Links, Scrape links, and More ... </i>
+I can Bypass Various Shortener Links, Scrape links, and More
+Use /cmd to see all commands list
 🛃 | <b>Click on below button to use me</b>''',
         quote=True,
         reply_markup=InlineKeyboardMarkup([
@@ -30,6 +31,41 @@ async def start_msg(client, message):
 async def start_msg(client, message):
     await message.reply(f'''🩸 SUPPORTED SITES LIST
 👉 https://throwbin.in/3v62zu''',
+        quote=True,
+        reply_markup=InlineKeyboardMarkup([
+            [InlineKeyboardButton('📞 Contact Us! 📞', url='https://t.me/bhaiyajihubbot'),]
+            ])
+    )
+
+@Bypass.on_message(command('alive'))
+async def start_msg(client, message):
+    await message.reply(f'''<b>I am active Bro.. 🥵</b>''',
+        quote=True,
+        reply_markup=InlineKeyboardMarkup([
+            [InlineKeyboardButton('♻️ Click Here ♻️', url='https://t.me/+-QfSjbyIV945MjNl'),]
+            ])
+    )
+
+@Bypass.on_message(command('about'))
+async def start_msg(client, message):
+    await message.reply(f'''<b>🤖 Mʏ Nᴀᴍᴇ: {}
+🧑 Developer: <a href='https://t.me/bhaiyajihubbot'>Bhaiyaji</a>
+📚 Lɪʙʀᴀʀʏ: <a href='https://docs.pyrogram.org/'>Pʏʀᴏɢʀᴀᴍ</a>
+🗣 Lᴀɴɢᴜᴀɢᴇ: <a href='https://www.python.org/download/releases/3.0/'>Pʏᴛʜᴏɴ 3</a>
+🌐 DᴀᴛᴀBᴀsᴇ: <a href='https://www.mongodb.com/'>MᴏɴɢᴏDB</a>
+📊 Bᴜɪʟᴅ Sᴛᴀᴛᴜs: v1.0.0 [ Sᴛᴀʙʟᴇ ]</b>''',
+        quote=True,
+        reply_markup=InlineKeyboardMarkup([
+            [InlineKeyboardButton('♻️ Support Channel ♻️', url='https://t.me/livetelebots'),]
+            ])
+    )
+
+@Bypass.on_message(command('cmd'))
+async def start_msg(client, message):
+    await message.reply(f'''🩸 Commands Available
+👉 /alive - To check status of bot, if alive or not
+👉 /help - To see supported sites list that can be bypassed using our bot
+👉 /about - Info of Bot and Contact details of Developer''',
         quote=True,
         reply_markup=InlineKeyboardMarkup([
             [InlineKeyboardButton('📞 Contact Us! 📞', url='https://t.me/bhaiyajihubbot'),]
