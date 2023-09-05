@@ -17,6 +17,7 @@
 
 ## ***Features***
 - _Fastest written in Async_
+- _LoopBypass V1 (Auto Bypass Nested Shorteners)_
 - _Build with Simultaneously Bypass Method_
 - _Supported for Authorized Chats & Topics_
 - _Added Support for Inline Bypass ( Use anytime anywhere)_
@@ -76,7 +77,7 @@
 |`earn4link.in`|✅️|
 |`linksly.co`|✅️|
 |`download.mdiskshortner.link`|✅️|
-|`shrdsk.me`|️❌️|
+|`shrdsk.me`|️️✅️|
 |`mediafire.com`|✅️|
 |`terabox.*` + `terabox.*` + `nephobox.*` + `4funbox.*` + `mirrobox.*` + `momerybox.*` + `teraboxapp.*`|✅️|
 |`hotfile.io` + `bayfiles.com` + `megaupload.nz` + `letsupload.cc` + `filechan.org` + `myfile.is` + `vshare.is` + `rapidshare.nu` + `lolabits.se` + `openload.cc` + `share-online.is` + `upvid.cc`️|⚠️|
@@ -127,6 +128,8 @@
 |`www.1tamilmv.*` **(Page)**|✅️|
 
 ### ***GDrive Sites***
+> _Fast Index Link is Supported for all GD Sites_
+
 | __Websites__ | __Status__ |
 |:--------------------:|:----------:|
 |`new9.gdtot.cfd`|✅️|
@@ -195,6 +198,8 @@
   - Generate via [Google-Drive-Index](https://gitlab.com/GoogleDriveIndex/cloudflare-gdrive-download-worker/-/blob/main/src/worker.js). Follow further from inside the script. Copy & Deploy on [CF Workers](https://cloudflare.com)
   - Get Raw `Refresh Token` from [lavarel-google](https://github.com/ivanvermeyen/laravel-google-drive-demo/blob/master/README/2-getting-your-refresh-token.md)
 - `TERA_COOKIE`: Get the Terabox `ndus` Cookie from Cookie Editor Extension.
+- `LARAVEL_SESSION`: Get from `sharer.pw` Cookie for Login base.
+- `XSRF_TOKEN`: Get from `sharer.pw` Cookie for Login base.
 - `UPSTREAM_REPO`: Put Upstream Repo to Update. Defaults to `https://github.com/SilentDemonSD/FZBypassBot`
 - `UPSTREAM_BRANCH`: Put Branch Name. Defaults to `main`
 
