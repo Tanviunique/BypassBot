@@ -28,10 +28,11 @@ Use /cmd to see all commands list
 @Bypass.on_message(command('help'))
 async def start_msg(client, message):
     await message.reply(f'''🩸 SUPPORTED SITES LIST
-👉 https://throwbin.in/3v62zu''',
+👉 https://throwbin.in/ndl1v3
+**Last Updated on 05/09/2023**''',
         quote=True,
         reply_markup=InlineKeyboardMarkup([
-            [InlineKeyboardButton('📞 Contact Us! 📞', url='https://t.me/bhaiyajihubbot'),]
+            [InlineKeyboardButton('👋 SUPPORTED SITES LIST 👋', url='https://throwbin.in/ndl1v3'),]
             ])
     )
 
