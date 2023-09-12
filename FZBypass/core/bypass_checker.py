@@ -17,10 +17,10 @@ anonSites = ['hotfile.io', 'bayfiles.com', 'megaupload.nz', 'letsupload.cc',
             'openload.cc', 'share-online.is', 'upvid.cc']
 
 def is_share_link(url):
-    return bool(match(r'https?:\/\/.+\.(gdtot|filepress|gdflix)\.\S+|https?:\/\/(gdflix|filepress|onlystream|filebee|appdrive)\.\S+', url))
+    return bool(match(r'https?:\/\/.+\.(gdtot|filepress|pressbee|gdflix)\.\S+|https?:\/\/(gdflix|filepress|pressbee|onlystream|filebee|appdrive)\.\S+', url))
 
 def is_excep_link(url):
-    return bool(match(r'https?:\/\/.+\.(1tamilmv|gdtot|filepress|gdflix|sharespark)\.\S+|https?:\/\/(sharer|onlystream|hubdrive|katdrive|drivefire|skymovieshd|toonworld4all|kayoanime|cinevood|gdflix|filepress|filebee|appdrive)\.\S+', url))
+    return bool(match(r'https?:\/\/.+\.(1tamilmv|gdtot|filepress|pressbee|gdflix|sharespark)\.\S+|https?:\/\/(sharer|onlystream|hubdrive|katdrive|drivefire|skymovieshd|toonworld4all|kayoanime|cinevood|gdflix|filepress|pressbee|filebee|appdrive)\.\S+', url))
 
 async def direct_link_checker(link, onlylink=False):
     domain = urlparse(link).hostname
@@ -183,6 +183,8 @@ async def direct_link_checker(link, onlylink=False):
         blink = await shareus(link)
     elif bool(match(r"https?:\/\/dropbox\.\S+", link)):
         blink = await dropbox(link)
+    elif bool(match(r"https?:\/\/uptobox\.\S+", link)):
+        blink = await uptobox(link)
     elif bool(match(r"https?:\/\/linkvertise\.\S+", link)):
         blink = await linkvertise(link)
     elif bool(match(r"https?:\/\/rslinks\.\S+", link)):
@@ -224,7 +226,7 @@ async def direct_link_checker(link, onlylink=False):
     elif is_share_link(link):
         if 'gdtot' in domain:
             return await gdtot(link)
-        elif 'filepress' in domain:
+        elif 'filepress' in domain or 'pressbee' in domain:
             return await filepress(link)
         elif 'appdrive' in domain or 'gdflix' in domain:
             return await appflix(link)
