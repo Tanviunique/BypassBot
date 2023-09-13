@@ -27,12 +27,14 @@ Use /cmd to see all commands list
 
 @Bypass.on_message(command('help'))
 async def start_msg(client, message):
-    await message.reply(f'''🩸 SUPPORTED SITES LIST
+    await message.reply(f'''
+    🩸 SUPPORTED SITES LIST
 **Last Updated on 05/09/2023**
-**__Click on below button to check site, that can be bypassed using this bot__**''',
+**__Click on below button to check site, that can be bypassed using this bot__**
+''',
         quote=True,
         reply_markup=InlineKeyboardMarkup([
-            [InlineKeyboardButton('👋 SUPPORTED SITES LIST 👋', url='https://throwbin.in/ndl1v3'),]
+            [InlineKeyboardButton('👋 SUPPORTED SITES LIST 👋', url='https://throwbin.in/izz3ch'),]
             ])
     )
 
