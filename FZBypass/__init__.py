@@ -19,9 +19,9 @@ load_dotenv('config.env', override=True)
 BOT_START = time()
 
 class Config:
-    BOT_TOKEN = getenv('BOT_TOKEN', '')
-    API_HASH  = getenv('API_HASH', '')
-    API_ID    = getenv('API_ID', '')
+    BOT_TOKEN = getenv('BOT_TOKEN', '6479807609:AAGr1v8hzmM_Bd1odsYvfC7oulolfaeDCtU')
+    API_HASH  = getenv('API_HASH', '27451023')
+    API_ID    = getenv('API_ID', 'bd26cd4acbb585615a3ccfdca9a8dcc3')
     if BOT_TOKEN == '' or API_HASH == '' or API_ID == '':
         LOGGER.critical('ENV Missing. Exiting Now...')
         exit(1)
